@@ -12,7 +12,7 @@ var commandsData = {  //all of the line commands
     tweetRead: 'my-tweets',
     tweetSend: 'send-tweet',
     tweetSearch: 'search-tweet',
-    spotifyPlay: 'spotify-this-song',
+    spotifySearch: 'spotify-this-song',
     movieSearch: 'movie-this'
 };
 
@@ -20,6 +20,7 @@ var commandsData = {  //all of the line commands
 require("dotenv").config();
 var keys = require("./keys.js");
 var Twitter = require('twitter');
+var inquirer = require("inquirer");
 //var Spotify = require('spotify');
 
 //var spotify = new Spotify(keys.spotify);
@@ -42,7 +43,7 @@ var writeLogFile = function (msgIn, type) {
 
 var writeOutput = function (msgIn, type) {
     console.log(msgIn);
-    writeLogFile( msgIn, "C");
+    writeLogFile(msgIn, "C");
 };
 
 
@@ -80,6 +81,7 @@ var getTweets_done = function (tweetsIn) {
 
 
 var sendTweet_start = function (tweetSend) {
+    tweetSend = "auto-gen liri: " + tweetSend;
     params = { status: tweetSend };
     client.post('statuses/update', params, function (error, tweet, response) {
         if (!error) {
@@ -147,10 +149,52 @@ var OMDBsearch_start = function (movieIn) {
 };
 
 
+var evalCommand = function ( cmdIn ) {
+    //function to evaluate an incoming command
+
+    var cd = commandsData; //shortcut notation
+
+    switch (cmdIn) {
+        case cd.help:
+            var outputStr = "help command:";
+            writeOutput(outputStr, "C");
+            outputStr = "help=          '" + cd.help + "'";
+            writeOutput(outputStr, "C");
+            outputStr = "read tweets=   '" + cd.tweetRead + "'";
+            writeOutput(outputStr, "C");
+            outputStr = "send tweet=    '" + cd.tweetSend + "' + tweet to send";
+            writeOutput(outputStr, "C");
+            outputStr = "search tweets= '" + cd.tweetSearch + "' + tweet search string";
+            writeOutput(outputStr, "C");
+            outputStr = "(by subject)";
+            writeOutput(outputStr, "C");
+            outputStr = "spotify=       '" + cd.spotifyPlay + "' + song title to play";
+            writeOutput(outputStr, "C");
+            outputStr = "movie search=  '" + cd.movieSearch + "'";
+            writeOutput(outputStr, "C");
+            outputStr = "(by title)";
+            writeOutput(outputStr, "C");
+            break;
+        case cd.tweetRead:
+            getTweets_start();
+            break;
+        case cd.tweetSend:
+            sendTweet_start(cmdParam);
+            break;
+        case cd.tweetSearch:
+            break;
+        case cd.spotifyPlay:
+            break;
+        case cd.movieSearch:
+            break;
+    };        
+};
+
+
 //main loop is here
 var cmdLineArgs = process.argv;
 var cmdReadIn = cmdLineArgs[2];
-console.log( cmdReadIn);
+console.log(cmdReadIn);
 var cmdParam = "";
 for (var i = 2; i < cmdLineArgs.length; i++) {
     if (!(i === 2)) {
@@ -159,41 +203,67 @@ for (var i = 2; i < cmdLineArgs.length; i++) {
     };
     cmdParam += cmdLineArgs[i];
 };
-//make all lower case just in case
-cmdReadIn = cmdReadIn.toLowerCase();
-var cd = commandsData; //shortcut notation
 
-switch (cmdReadIn) {
-    case cd.help:
-        var outputStr = "help command:";
-        writeOutput(outputStr, "C");
-        outputStr = "help=          '" + cd.help + "'";
-        writeOutput(outputStr, "C");
-        outputStr = "read tweets=   '" + cd.tweetRead + "'";
-        writeOutput(outputStr, "C");
-        outputStr = "send tweet=    '" + cd.tweetSend + "' + tweet to send";
-        writeOutput(outputStr, "C");
-        outputStr = "search tweets= '" + cd.tweetSearch + "' + tweet search string";
-        writeOutput(outputStr, "C");
-        outputStr = "(by subject)";
-        writeOutput(outputStr, "C");
-        outputStr = "spotify=       '" + cd.spotifyPlay + "' + song title to play";
-        writeOutput(outputStr, "C");
-        outputStr = "movie search=  '" + cd.movieSearch + "'";
-        writeOutput(outputStr, "C");
-        outputStr = "(by title)";
-        writeOutput(outputStr, "C");
-        break;
-    case cd.tweetRead:
-        getTweets_start();
-        break;
-    case cd.tweetSend(cmdParam):
-        break;
-    case cd.tweetSearch:
-        break;
-    case cd.spotifyPlay:
-        break;
-    case cd.movieSearch:
-        break;
+//make all lower case just in case
+if (cmdReadIn === "" || cmdReadIn === null || cmdReadIn === undefined) {
+    writeOutput("no line command parameters", "C");
+    writeOutput("switching to screen input");
+    inquirer
+        .prompt([
+            // Here we create a basic text prompt.
+            // Here we give the user a list to choose from.
+            {
+                type: "list",
+                message: "Which commannd do you want to run",
+                choices: ["read tweets", "send tweets", "search spotify", "search movie title"],
+                name: "cmdList"
+            },
+            {
+                type: "input",
+                message: "What title / string ",
+                name: "searchString",
+            },
+            // Here we ask the user to confirm.
+            {
+                type: "confirm",
+                message: "Are you sure ",
+                name: "confirm",
+                default: true
+            }
+        ])
+        .then(function (inquireResponse) {
+            // If the inquirerResponse confirms, we displays the inquirerResponse's username and pokemon from the answers.
+            if (inquireResponse.confirm) {
+                //console.log
+                var cd = commandsData;  //for short hand notation
+                console.log(inquireResponse.cmdList );
+                cmdParam = inquireResponse.searchString.trim();
+                pickedCmd = inquireResponse.cmdList.trim();
+                switch ( pickedCmd ) {
+                    case "read tweets":
+                        cmdReadIn = cd.tweetRead;
+                        break;
+                    case "send tweets":
+                        cmdReadIn = cd.tweetSend;
+                        break;
+                    case "search spotify":
+                        cmdReadIn = cd.spotifySearch;
+                        break;
+                    case "search movie title":
+                        cmdReadIn = cd.movieSearch;
+                        break;
+                };
+                console.log( "command = " + cmdReadIn );
+                evalCommand( cmdReadIn );
+            }
+            else {
+                writeLogFile("user aborted", "W");
+                writeOutput("Thanks for stopping by");
+            };
+        });
+
+} else {
+    cmdReadIn = cmdReadIn.toLowerCase();
+    evalCommand( cmdReadIn );
 };
 
