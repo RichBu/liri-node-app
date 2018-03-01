@@ -2,6 +2,7 @@
 
 var configData = {  //location of files and accounts
     logFile: "./log.txt",
+    inputFile: "./random.txt",
     twitterAcctName: "RTwitAccount",
     twitterNumTweets: 10,
     EOR: ""                //place keeper
@@ -14,7 +15,9 @@ var commandsData = {  //all of the line commands
     tweetSearch: 'search-tweet',
     spotifySearch: 'spotify-this-song',
     movieSearch: 'movie-this',
-    resetLogFile: 'reset-log'
+    commFromFile: 'do-what-it-says',
+    resetLogFile: 'reset-log',
+    quitProgram: 'quit'
 };
 
 
@@ -31,6 +34,33 @@ var client = new Twitter(keys.twitter);
 var spotify = new Spotify(keys.spotify);
 
 
+
+var getDateTime = function () {
+    //returns current date/time for time stamping the log file
+    var date = new Date();
+
+    var hour = date.getHours();
+    hour = (hour < 10 ? "0" : "") + hour;
+
+    var min = date.getMinutes();
+    min = (min < 10 ? "0" : "") + min;
+
+    var sec = date.getSeconds();
+    sec = (sec < 10 ? "0" : "") + sec;
+
+    var year = date.getFullYear();
+
+    var month = date.getMonth() + 1;
+    month = (month < 10 ? "0" : "") + month;
+
+    var day = date.getDate();
+    day = (day < 10 ? "0" : "") + day;
+
+    return year + "-" + month + "-" + day + " " + hour + ":" + min + ":" + sec;
+
+};
+
+
 var writeLogFile = function (msgIn, type) {
     //this is where messages get logged
     //make sure to put \n at end of msgIn
@@ -42,10 +72,22 @@ var writeLogFile = function (msgIn, type) {
     var outStr = "";
     switch (type) {
         case "E":
-            outStr = "\nERROR ---" + msgIn + "\n";
+            outStr = "\n";
+            outStr += "[" + getDateTime() + "]";
+            outStr += " ERROR ---" + msgIn + "\n";
+            break;
+        case "N":
+            outStr = "\n\n";
+            outStr += "[" + getDateTime() + "]";
+            outStr += "--- NEW RUN ---" + msgIn + "\n";
+            break;
+        case "P":
+            outStr = "\nCommand picked --- " + msgIn + "\n";
             break;
         case "W":
-            outStr = "Warning ---" + msgIn + "\n";
+            outStr = "\n";
+            outStr += "[" + getDateTime() + "]";
+            outStr += " Warning ---" + msgIn + "\n";
             break;
         case "CF":  //console output with a footer
             outStr = msgIn + "\n";
@@ -60,7 +102,11 @@ var writeLogFile = function (msgIn, type) {
     };
     // Append the output to the log file
     fs.appendFile(configData.logFile, outStr, function (err) {
-        if (err) throw err;
+        if (err) {
+            //can't error, because problem is with log file !!!
+            console.log('error with log file.  error=' + err);
+            throw err;
+        };
     });
 };
 
@@ -149,38 +195,23 @@ var searchTweet_start = function (subjSearch) {
             searchTweet_done(tweets);
             //getTweets_done(tweets);
             //console.log(tweetsIn);
-            var numTweets = tweets.statuses.length;
-            writeLogFile("tweet search output to screen :");
-            var outputStr = "Search tweets:\n";
-            writeOutput(outputStr, "CH");
-            outputStr = "number of tweets found = " + numTweets + "\n";
-            writeOutput(outputStr);
-            for (var i = 0; i < numTweets; i++) {
-                outputStr = "#" + i + ":   " + tweets.statuses[i].text + "\n";;
-                outputStr += "  by: " + tweets.statuses[i].user.screen_name + "\n";
-                outputStr += "  at: " + tweets.statuses[i].created_at + "\n";
-                writeOutput(outputStr);
-            };
-            writeOutput("\n", "CF");
         };
     });
 };
 
 
 var searchTweet_done = function (tweetsIn) {
-    console.log(tweetsIn);
-    var numTweets = tweetsIn.length;
+    var numTweets = tweetsIn.statuses.length;
     writeLogFile("tweet search output to screen :");
     var outputStr = "Search tweets:\n";
     writeOutput(outputStr, "CH");
     outputStr = "number of tweets found = " + numTweets + "\n";
     writeOutput(outputStr);
     for (var i = 0; i < numTweets; i++) {
-        outputStr = "#" + i + ": \n";
-        outputStr += "    " + tweetsIn[i].text + "\n";
-        outputStr += "    " + tweetsIn[i].created_at + "\n";
+        outputStr = "#" + i + ":   " + tweetsIn.statuses[i].text + "\n";;
+        outputStr += "  by: " + tweetsIn.statuses[i].user.screen_name + "\n";
+        outputStr += "  at: " + tweetsIn.statuses[i].created_at + "\n";
         writeOutput(outputStr);
-        console.log(tweetsIn[i].user);
     };
     writeOutput("\n", "CF");
 };
@@ -191,7 +222,7 @@ var spotifySong_start = function (songIn) {
     var search;
     if (songIn === '') {   //check if null
         writeOutput("no song specified. using default", "W"); //warning
-        search = 'I am not your fool';
+        search = 'the sign ace of base';
     } else {
         search = songIn;
     };
@@ -234,7 +265,7 @@ var spotifySong_done = function (error, data) {
 var OMDBsearch_start = function (movieIn) {
     var search;
     if (movieIn === '') {
-        search = 'Mr. Nobody';
+        search = '' + '&i=tt0485947';
     } else {
         search = movieIn;
     };
@@ -278,13 +309,83 @@ var OMDBsearch_start = function (movieIn) {
 };
 
 
-var evalCommand = function (cmdIn) {
+var readCommFromFile = function (fileIn) {
+    var cd = configData;  //shorthand notation
+    var inpFile;
+    if (fileIn === "" || fileIn === undefined) {
+        //if incoming is blank, then use default
+        inpFile = cd.inputFile;
+    } else {
+        var testString = fileIn;
+        if (testString[0] != ".") {
+            //first character is not a directory, so add in
+            testString = "./" + fileIn;
+        }
+        inpFile = testString;
+    };
+    //open and read command from file here
+    fs.readFile(inpFile, 'utf8', function (error, data) {
+        if (error) {
+            writeLogFile("reading from '" + inpFile + "'.", "E");
+            writeLogFile("error message = " + error);
+            writeOutput("reading from file '" + inpFile + "'. make sure it existis", "E");
+            writeOutput("error = " + error);
+            return;
+        } else {
+            // Split out the command name and the parameter name
+            var inputString = data.split(',');
+            var cmd = inputString[0].trim();
+            var param = inputString[1].trim();
+            writeLogFile("command read in from file : " + cmd);
+            writeLogFile("parameter read in from file : " + param);
+            evalCommand(cmd, param); //this is a recursive call
+        };
+    });
+};
+
+
+var resetLogFile = function () {
+    //clear the log file.  prompt first
+    inquirer
+        .prompt([
+            // Here we create a basic text prompt.
+            {
+                type: "confirm",
+                message: "Are you sure you want to PERMANENTLY clear the log file ? ",
+                name: "confirm",
+                default: true
+            }
+        ])
+        .then(function (inquireResponse) {
+            // If the inquirerResponse confirms, we displays the inquirerResponse's username and pokemon from the answers.
+            if (inquireResponse.confirm) {
+                //delete the file by writing a blank line
+                fs.writeFile(configData.logFile, "", function (err) {
+                    if (err) {
+                        console.log('error with log file.  error=' + err);
+                        throw err;
+                    } else {
+                        writeLogFile("user chose to manually clear the log file", "W");
+                    };
+                });
+            }
+            else {
+                writeLogFile("user aborted clearing the log file", "W");
+                writeOutput("Thanks for stopping by");
+            };
+        });
+
+};
+
+
+var evalCommand = function (cmdIn, cmdParamIn) {
     //function to evaluate an incoming command
 
     var cd = commandsData; //shortcut notation
 
     switch (cmdIn) {
         case cd.help:
+            writeLogFile("help", "P");
             var outputStr = "help command:";
             writeOutput(outputStr, "C");
             outputStr = "help=          '" + cd.help + "'";
@@ -305,26 +406,44 @@ var evalCommand = function (cmdIn) {
             writeOutput(outputStr, "C");
             outputStr = "(by title)";
             writeOutput(outputStr, "C");
+            outputStr = "read command  ='" + cd.commFromFile + "'";
+            writeOutput(outputStr, "C");
+            outputStr = "from random.txt";
+            writeOutput(outputStr, "C");
             outputStr = "reset log file='" + cd.resetLogFile + "'";
             writeOutput(outputStr, "C");
             break;
         case cd.tweetRead:
+            writeLogFile("read tweets", "P");
             getTweets_start();
             break;
         case cd.tweetSend:
-            sendTweet_start(cmdParam);
+            writeLogFile("send tweet", "P");
+            sendTweet_start(cmdParamIn);
             break;
         case cd.tweetSearch:
-            searchTweet_start(cmdParam);
+            writeLogFile("search tweet", "P");
+            searchTweet_start(cmdParamIn);
             break;
         case cd.spotifySearch:
-            spotifySong_start(cmdParam);
+            writeLogFile("spotify search", "P");
+            spotifySong_start(cmdParamIn);
             break;
         case cd.movieSearch:
-            OMDBsearch_start(cmdParam);
+            writeLogFile("movie search", "P");
+            OMDBsearch_start(cmdParamIn);
+            break;
+        case cd.commFromFile:
+            writeLogFile("read command from file", "P");
+            readCommFromFile(); //for now, use default
             break;
         case cd.resetLogFile:
-            //OMDBsearch_start(cmdParam);
+            writeLogFile("reset (clear) log file", "P");
+            resetLogFile();
+            break;
+        case cd.quitProgram:
+            writeLogFile("user quit program using Quit command", "W");
+            writeOutput("Thanks for stopping by", "C");
             break;
     };
 };
@@ -342,6 +461,9 @@ for (var i = 3; i < cmdLineArgs.length; i++) {
     cmdParam += cmdLineArgs[i];
 };
 
+console.log("use '?' for help or no parameter for interactive mode\n\n");
+writeLogFile("", "N");
+
 //make all lower case just in case
 if (cmdReadIn === "" || cmdReadIn === null || cmdReadIn === undefined) {
     writeOutput("no line command parameters", "C");
@@ -353,7 +475,7 @@ if (cmdReadIn === "" || cmdReadIn === null || cmdReadIn === undefined) {
             {
                 type: "list",
                 message: "Which commannd do you want to run",
-                choices: ["read tweets", "send tweets", "search tweets", "search spotify", "search movie title", "reset log file"],
+                choices: ["read tweets", "send tweets", "search tweets", "search spotify", "search movie title", "read commands from random.txt", "reset log file", "Quit"],
                 name: "cmdList"
             },
             {
@@ -391,11 +513,17 @@ if (cmdReadIn === "" || cmdReadIn === null || cmdReadIn === undefined) {
                     case "search movie title":
                         cmdReadIn = cd.movieSearch;
                         break;
+                    case "read commands from random.txt":
+                        cmdReadIn = cd.commFromFile;
+                        break;
                     case "reset log file":
                         cmdReadIn = cd.resetLogFile;
                         break;
+                    case "Quit":
+                        cmdReadIn = "quit";
+                        break;
                 };
-                evalCommand(cmdReadIn);
+                evalCommand(cmdReadIn, cmdParam);
             }
             else {
                 writeLogFile("user aborted", "W");
@@ -405,6 +533,6 @@ if (cmdReadIn === "" || cmdReadIn === null || cmdReadIn === undefined) {
 
 } else {
     cmdReadIn = cmdReadIn.toLowerCase();
-    evalCommand(cmdReadIn);
+    evalCommand(cmdReadIn, cmdParam);
 };
 
