@@ -172,6 +172,7 @@ var getTweets_done = function (tweetsIn) {
 
 
 var sendTweet_start = function (tweetSend) {
+    tweetSend = tweetSend.split('+').join(' ');
     tweetSend = "auto-gen liri: " + tweetSend;
     params = { status: tweetSend };
     client.post('statuses/update', params, function (error, tweet, response) {
