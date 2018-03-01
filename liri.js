@@ -21,10 +21,13 @@ require("dotenv").config();
 var keys = require("./keys.js");
 var Twitter = require('twitter');
 var inquirer = require("inquirer");
-//var Spotify = require('spotify');
+var Spotify = require('node-spotify-api');
 
-//var spotify = new Spotify(keys.spotify);
+console.log("keys=" + JSON.stringify(keys,null,2));
+
+//var spotify = new SpotifyObj(keys.spotify);
 var client = new Twitter(keys.twitter);
+var spotify = new Spotify(keys.spotify);
 
 //var OMDB_key = new OMDB(keys.OMDB);
 
@@ -108,17 +111,44 @@ var spotifySong_start = function (songIn) {
     } else {
         search = songIn;
     };
+console.log("search =/" + search+"/" );
 
     writeLogFile("REQ spotify");
     var params = { type: 'track', query: search };
     spotify.search(params, function (error, data) {
         //search is done
-        spotifySong_done();
+        writeLogFile("spotify retrieve done");
+        if (error) {
+            writeLogFile("retrieving Spotify track", "E", error);
+        } else {
+console.log( data );            
+            var songInfo = data.tracks.items[0];
+            if (!songInfo) {
+                writeLogFile("no song found", "E");
+                writeOutput("... no song found ... check your spelling");
+                return;
+            } else {
+                //valid song found 
+                var outputStr = '------------------------\n' +
+                    'Song Information:\n' +
+                    '------------------------\n\n' +
+                    'Song Name: ' + songInfo.name + '\n' +
+                    'Artist: ' + songInfo.artists[0].name + '\n' +
+                    'Album: ' + songInfo.album.name + '\n' +
+                    'Preview Here: ' + songInfo.preview_url + '\n';
+                writeOutput(outputStr);
+            };
+        };
+
+
+
+
+        //        spotifySong_done(error,data);
     });
 };
 
 
-var spotifySong_done = function () {
+var spotifySong_done = function (error, data) {
     //spotify search back from async search
     writeLogFile("spotify retrieve done");
     if (error) {
@@ -149,7 +179,7 @@ var OMDBsearch_start = function (movieIn) {
 };
 
 
-var evalCommand = function ( cmdIn ) {
+var evalCommand = function (cmdIn) {
     //function to evaluate an incoming command
 
     var cd = commandsData; //shortcut notation
@@ -183,11 +213,12 @@ var evalCommand = function ( cmdIn ) {
             break;
         case cd.tweetSearch:
             break;
-        case cd.spotifyPlay:
+        case cd.spotifySearch:
+            spotifySong_start(cmdParam);
             break;
         case cd.movieSearch:
             break;
-    };        
+    };
 };
 
 
@@ -196,8 +227,8 @@ var cmdLineArgs = process.argv;
 var cmdReadIn = cmdLineArgs[2];
 console.log(cmdReadIn);
 var cmdParam = "";
-for (var i = 2; i < cmdLineArgs.length; i++) {
-    if (!(i === 2)) {
+for (var i = 3; i < cmdLineArgs.length; i++) {
+    if (!(i === 3)) {
         //if it is not the first parameter, then add space
         cmdParam += " ";
     };
@@ -236,10 +267,10 @@ if (cmdReadIn === "" || cmdReadIn === null || cmdReadIn === undefined) {
             if (inquireResponse.confirm) {
                 //console.log
                 var cd = commandsData;  //for short hand notation
-                console.log(inquireResponse.cmdList );
+                console.log(inquireResponse.cmdList);
                 cmdParam = inquireResponse.searchString.trim();
                 pickedCmd = inquireResponse.cmdList.trim();
-                switch ( pickedCmd ) {
+                switch (pickedCmd) {
                     case "read tweets":
                         cmdReadIn = cd.tweetRead;
                         break;
@@ -253,8 +284,8 @@ if (cmdReadIn === "" || cmdReadIn === null || cmdReadIn === undefined) {
                         cmdReadIn = cd.movieSearch;
                         break;
                 };
-                console.log( "command = " + cmdReadIn );
-                evalCommand( cmdReadIn );
+                console.log("command = " + cmdReadIn);
+                evalCommand(cmdReadIn);
             }
             else {
                 writeLogFile("user aborted", "W");
@@ -264,6 +295,6 @@ if (cmdReadIn === "" || cmdReadIn === null || cmdReadIn === undefined) {
 
 } else {
     cmdReadIn = cmdReadIn.toLowerCase();
-    evalCommand( cmdReadIn );
+    evalCommand(cmdReadIn);
 };
 
