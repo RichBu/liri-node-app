@@ -23,16 +23,10 @@ var Twitter = require('twitter');
 var inquirer = require("inquirer");
 var Spotify = require('node-spotify-api');
 
-console.log("keys=" + JSON.stringify(keys,null,2));
-
 //var spotify = new SpotifyObj(keys.spotify);
 var client = new Twitter(keys.twitter);
 var spotify = new Spotify(keys.spotify);
 
-//var OMDB_key = new OMDB(keys.OMDB);
-
-//writeOutput(client);
-//writeOutput(keys.twitter);
 
 var writeLogFile = function (msgIn, type) {
     //this is where messages get logged
@@ -111,7 +105,6 @@ var spotifySong_start = function (songIn) {
     } else {
         search = songIn;
     };
-console.log("search =/" + search+"/" );
 
     writeLogFile("REQ spotify");
     var params = { type: 'track', query: search };
@@ -121,7 +114,6 @@ console.log("search =/" + search+"/" );
         if (error) {
             writeLogFile("retrieving Spotify track", "E", error);
         } else {
-console.log( data );            
             var songInfo = data.tracks.items[0];
             if (!songInfo) {
                 writeLogFile("no song found", "E");
@@ -175,6 +167,64 @@ var spotifySong_done = function (error, data) {
 
 
 var OMDBsearch_start = function (movieIn) {
+	var search;
+	if (movie === '') {
+		search = 'Mr. Nobody';
+	} else {
+		search = movie;
+	}
+
+	// Replace spaces with '+' for the query string
+	search = search.split(' ').join('+');
+
+	// Construct the query string
+	var queryStr = 'http://www.omdbapi.com/?t=' + search + '&plot=full&tomatoes=true&apikey='+keys.OMDB;
+
+	// Send the request to OMDB
+	request(queryStr, function (error, response, body) {
+		if ( error || (response.statusCode !== 200) ) {
+			var errorStr1 = 'ERROR: Retrieving OMDB entry -- ' + error;
+
+			// Append the error string to the log file
+			fs.appendFile('./log.txt', errorStr1, (err) => {
+				if (err) throw err;
+				console.log(errorStr1);
+			});
+			return;
+		} else {
+			var data = JSON.parse(body);
+			if (!data.Title && !data.Released && !data.imdbRating) {
+				var errorStr2 = 'ERROR: No movie info retrieved, please check the spelling of the movie name!';
+
+				// Append the error string to the log file
+				fs.appendFile('./log.txt', errorStr2, (err) => {
+					if (err) throw err;
+					console.log(errorStr2);
+				});
+				return;
+			} else {
+		    	// Pretty print the movie information
+		    	var outputStr = '------------------------\n' + 
+								'Movie Information:\n' + 
+								'------------------------\n\n' +
+								'Movie Title: ' + data.Title + '\n' + 
+								'Year Released: ' + data.Released + '\n' +
+								'IMBD Rating: ' + data.imdbRating + '\n' +
+								'Country Produced: ' + data.Country + '\n' +
+								'Language: ' + data.Language + '\n' +
+								'Plot: ' + data.Plot + '\n' +
+								'Actors: ' + data.Actors + '\n' + 
+								'Rotten Tomatoes Rating: ' + data.tomatoRating + '\n' +
+								'Rotten Tomatoes URL: ' + data.tomatoURL + '\n';
+
+				// Append the output to the log file
+				fs.appendFile('./log.txt', 'LIRI Response:\n\n' + outputStr + '\n', (err) => {
+					if (err) throw err;
+					console.log(outputStr);
+				});
+			}
+		}
+	});
 
 };
 
@@ -225,12 +275,11 @@ var evalCommand = function (cmdIn) {
 //main loop is here
 var cmdLineArgs = process.argv;
 var cmdReadIn = cmdLineArgs[2];
-console.log(cmdReadIn);
 var cmdParam = "";
 for (var i = 3; i < cmdLineArgs.length; i++) {
     if (!(i === 3)) {
         //if it is not the first parameter, then add space
-        cmdParam += " ";
+        cmdParam += "+";
     };
     cmdParam += cmdLineArgs[i];
 };
@@ -265,9 +314,7 @@ if (cmdReadIn === "" || cmdReadIn === null || cmdReadIn === undefined) {
         .then(function (inquireResponse) {
             // If the inquirerResponse confirms, we displays the inquirerResponse's username and pokemon from the answers.
             if (inquireResponse.confirm) {
-                //console.log
                 var cd = commandsData;  //for short hand notation
-                console.log(inquireResponse.cmdList);
                 cmdParam = inquireResponse.searchString.trim();
                 pickedCmd = inquireResponse.cmdList.trim();
                 switch (pickedCmd) {
@@ -284,7 +331,6 @@ if (cmdReadIn === "" || cmdReadIn === null || cmdReadIn === undefined) {
                         cmdReadIn = cd.movieSearch;
                         break;
                 };
-                console.log("command = " + cmdReadIn);
                 evalCommand(cmdReadIn);
             }
             else {
