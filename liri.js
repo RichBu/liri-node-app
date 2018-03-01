@@ -476,7 +476,8 @@ if (cmdReadIn === "" || cmdReadIn === null || cmdReadIn === undefined) {
                 type: "list",
                 message: "Which commannd do you want to run",
                 choices: ["read tweets", "send tweets", "search tweets", "search spotify", "search movie title", "read commands from random.txt", "reset log file", "Quit"],
-                name: "cmdList"
+                name: "cmdList",
+                pageSize: 10
             },
             {
                 type: "input",

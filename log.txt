@@ -117,3 +117,261 @@ Artist: Ludacris
 Album: Word Of Mouf
 Preview Here: null
 
+
+
+[2018-03-01 09:51:33]--- NEW RUN ---
+no line command parameters
+switching to screen input
+
+
+[2018-03-01 09:53:50]--- NEW RUN ---
+no line command parameters
+switching to screen input
+
+
+[2018-03-01 09:55:06]--- NEW RUN ---
+no line command parameters
+switching to screen input
+
+[2018-03-01 09:55:17] Warning ---user quit program using Quit command
+Thanks for stopping by
+
+
+[2018-03-01 09:55:28]--- NEW RUN ---
+no line command parameters
+switching to screen input
+
+Command picked --- read tweets
+REQ tweets
+received tweeets correctly
+tweet output to screen :
+===================================
+User tweets:
+
+number of tweets found = 10
+
+#0: 
+    auto-gen liri: sitting+by+corner+waiting+for+the+rain+to+go+away
+    Thu Mar 01 15:19:03 +0000 2018
+
+#1: 
+    auto-gen liri: Oatmeal ... the breakfast of champions
+    Thu Mar 01 14:42:37 +0000 2018
+
+#2: 
+    auto-gen liri: looking to train train train
+    Thu Mar 01 11:58:20 +0000 2018
+
+#3: 
+    auto-gen liri: Time to get something for dinner
+    Thu Mar 01 00:47:11 +0000 2018
+
+#4: 
+    auto-gen liri: send-tweet hello this is a good morning
+    Wed Feb 28 15:55:47 +0000 2018
+
+#5: 
+    auto-gen liri: send-tweet Test 2
+    Wed Feb 28 15:37:27 +0000 2018
+
+#6: 
+    auto gen from node: send-tweet Test
+    Wed Feb 28 15:35:44 +0000 2018
+
+#7: 
+    Auto-generated tweet
+    Wed Feb 28 01:31:58 +0000 2018
+
+#8: 
+    I am a tweet
+    Wed Feb 28 01:28:10 +0000 2018
+
+#9: 
+    Java, java, java, where is my iced coffee ?
+    Tue Feb 27 20:53:06 +0000 2018
+
+
+
+===================================
+
+
+[2018-03-01 10:03:06]--- NEW RUN ---
+no line command parameters
+switching to screen input
+
+Command picked --- movie search
+------------------------
+Movie Information:
+------------------------
+
+Movie Title: Mr. Nobody
+Year Released: 26 Sep 2013
+IMBD Rating: 7.9
+Country Produced: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Plot: In the year 2092, one hundred eighteen year old Nemo is recounting his life story to a reporter. He is less than clear, often times thinking that he is only thirty-four years of age. But his story becomes more confusing after he does focus on the fact of his current real age. He tells of his life at three primary points in his life: at age nine (when his parents divorced), age sixteen and age thirty-four. The confusing aspect of the story is that he tells of alternate life paths, often changing course with the flick of a decision at each of those ages. One life path has him ultimately married to Elise, a depressed woman who never got over the unrequited love she had for a guy named Stefano when she was a teenager and who asked Nemo to swear that when she died he would sprinkle her ashes on Mars. A second life path has him married to Jean. Their life is one of luxury but one also of utter boredom. And a third life path has him in a torrid romance with his step-sister Anna, the two who, as adults, would search for each other after having been torn apart as teenagers. These life paths also intersect, with the three women sometimes entering the alternate life in some other aspect. Are any of these lives real or are they all a figment of his imagination?
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+Rotten Tomatoes Rating: N/A
+Rotten Tomatoes URL: http://www.rottentomatoes.com/m/mr-nobody/
+
+
+
+[2018-03-01 10:04:57]--- NEW RUN ---
+no line command parameters
+switching to screen input
+
+[2018-03-01 10:05:06] Warning ---user quit program using Quit command
+Thanks for stopping by
+
+
+[2018-03-01 10:05:15]--- NEW RUN ---
+no line command parameters
+switching to screen input
+
+Command picked --- read tweets
+REQ tweets
+received tweeets correctly
+tweet output to screen :
+===================================
+User tweets:
+
+number of tweets found = 10
+
+#0: 
+    auto-gen liri: sitting+by+corner+waiting+for+the+rain+to+go+away
+    Thu Mar 01 15:19:03 +0000 2018
+
+#1: 
+    auto-gen liri: Oatmeal ... the breakfast of champions
+    Thu Mar 01 14:42:37 +0000 2018
+
+#2: 
+    auto-gen liri: looking to train train train
+    Thu Mar 01 11:58:20 +0000 2018
+
+#3: 
+    auto-gen liri: Time to get something for dinner
+    Thu Mar 01 00:47:11 +0000 2018
+
+#4: 
+    auto-gen liri: send-tweet hello this is a good morning
+    Wed Feb 28 15:55:47 +0000 2018
+
+#5: 
+    auto-gen liri: send-tweet Test 2
+    Wed Feb 28 15:37:27 +0000 2018
+
+#6: 
+    auto gen from node: send-tweet Test
+    Wed Feb 28 15:35:44 +0000 2018
+
+#7: 
+    Auto-generated tweet
+    Wed Feb 28 01:31:58 +0000 2018
+
+#8: 
+    I am a tweet
+    Wed Feb 28 01:28:10 +0000 2018
+
+#9: 
+    Java, java, java, where is my iced coffee ?
+    Tue Feb 27 20:53:06 +0000 2018
+
+
+
+===================================
+
+
+[2018-03-01 10:06:06]--- NEW RUN ---
+no line command parameters
+switching to screen input
+
+[2018-03-01 10:06:13] Warning ---user quit program using Quit command
+Thanks for stopping by
+
+
+[2018-03-01 10:06:23]--- NEW RUN ---
+no line command parameters
+switching to screen input
+
+Command picked --- search tweet
+searched tweeets correctly
+tweet search output to screen :
+===================================
+Search tweets:
+
+number of tweets found = 13
+
+#0:   RT @Annie_Khaliq: @sehurlburt I am proficient in JS, Node, Express, React and Redux. I am looking for employment in the NYC area. DMs are o…
+  by: sehurlburt
+  at: Thu Mar 01 16:05:44 +0000 2018
+
+#1:   RT @Annie_Khaliq: @sehurlburt I am proficient in JS, Node, Express, React and Redux. I am looking for employment in the NYC area. DMs are o…
+  by: yburyug
+  at: Thu Mar 01 16:05:16 +0000 2018
+
+#2:   @sehurlburt I am proficient in JS, Node, Express, React and Redux. I am looking for employment in the NYC area. DMs… https://t.co/MRvG6D2dRC
+  by: Annie_Khaliq
+  at: Thu Mar 01 16:04:51 +0000 2018
+
+#3:   RT @fabichirox: プロダクションでTypeScript(Cycle.js/Node.jt）とかHaskellとかPureScript書きたい人引き続き募集してます。
+
+https://t.co/eQbUghTzCc
+  by: haiju
+  at: Thu Mar 01 16:03:40 +0000 2018
+
+#4:   ラダーできないのでnode.jsとかいうのの勉強します
+  by: BloodEdge_HS
+  at: Thu Mar 01 16:03:22 +0000 2018
+
+#5:   Definición de Node.js, ventajas y desventajas. Node.js es un entorno de ejecución para JavaScript construido con... https://t.co/UswYNvhxBF
+  by: Desarrollador10
+  at: Thu Mar 01 16:00:12 +0000 2018
+
+#6:   RT @Brecht: 最近寫得少了，以前主要是JavaScript/Node.js，公司的產品有新聞網站和IT問答社群。Python其實我沒那麼熟，但程式基本上入門都不難，但基本語法之後就要看你的目的了，通常難在那裡 #MyProQ https://t.co/AS1zvJq3…
+  by: tangblack
+  at: Thu Mar 01 15:59:29 +0000 2018
+
+#7:   In Oct, we free our altogether redesigned iPad diligence, culminating months of implementing stain contemporary fun… https://t.co/JMCqieLE4e
+  by: pillowf
+  at: Thu Mar 01 15:58:28 +0000 2018
+
+#8:   @badgercat Срочно нужен Node.js developer (backend only) на интересный проект с офигенной командой, возможна удален… https://t.co/WDiVauoNPU
+  by: sdemidov
+  at: Thu Mar 01 15:57:58 +0000 2018
+
+#9:   最近寫得少了，以前主要是JavaScript/Node.js，公司的產品有新聞網站和IT問答社群。Python其實我沒那麼熟，但程式基本上入門都不難，但基本語法之後就要看你的目的了，通常難在那裡 #MyProQ… https://t.co/mufR5ZPddD
+  by: Brecht
+  at: Thu Mar 01 15:57:15 +0000 2018
+
+#10:   RT @FaiyazSundrani: Someone who wants to try OpenCV in Node, must read this !!
+“Node.js + OpenCV for Face Recognition” by @justadudewhohax…
+  by: AnatidaeProject
+  at: Thu Mar 01 15:54:36 +0000 2018
+
+#11:   RT @bestofwebconf: Plongez au cœur de Node.JS avec Vincent Vallet !
+https://t.co/ouwnfWkAhb https://t.co/hybzd8IKJ0
+  by: spontoreau
+  at: Thu Mar 01 15:52:45 +0000 2018
+
+#12:   RT @bestofwebconf: Plongez au cœur de Node.JS avec Vincent Vallet !
+https://t.co/ouwnfWkAhb https://t.co/hybzd8IKJ0
+  by: pariswebComps
+  at: Thu Mar 01 15:51:25 +0000 2018
+
+
+
+===================================
+
+
+[2018-03-01 10:07:29]--- NEW RUN ---
+no line command parameters
+switching to screen input
+
+[2018-03-01 10:07:37] Warning ---user quit program using Quit command
+Thanks for stopping by
+
+
+[2018-03-01 10:07:45]--- NEW RUN ---
+no line command parameters
+switching to screen input
