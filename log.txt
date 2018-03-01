@@ -1,0 +1,893 @@
+===================================
+no line command parameters
+
+ERROR ---reading tweets
+===================================
+no line command parameters
+===================================
+no line command parameters
+switching to screen inputREQ tweetsreceived tweeets correctlytweet output to screen :User tweets:
+number of tweets found = 8
+:#0: 
+    auto-gen liri: Time to get something for dinner
+    Thu Mar 01 00:47:11 +0000 2018
+#0: 
+    auto-gen liri: Time to get something for dinner
+    Thu Mar 01 00:47:11 +0000 2018
+:#1: 
+    auto-gen liri: send-tweet hello this is a good morning
+    Wed Feb 28 15:55:47 +0000 2018
+#1: 
+    auto-gen liri: send-tweet hello this is a good morning
+    Wed Feb 28 15:55:47 +0000 2018
+:#2: 
+    auto-gen liri: send-tweet Test 2
+    Wed Feb 28 15:37:27 +0000 2018
+#2: 
+    auto-gen liri: send-tweet Test 2
+    Wed Feb 28 15:37:27 +0000 2018
+:#3: 
+    auto gen from node: send-tweet Test
+    Wed Feb 28 15:35:44 +0000 2018
+#3: 
+    auto gen from node: send-tweet Test
+    Wed Feb 28 15:35:44 +0000 2018
+:#4: 
+    Auto-generated tweet
+    Wed Feb 28 01:31:58 +0000 2018
+#4: 
+    Auto-generated tweet
+    Wed Feb 28 01:31:58 +0000 2018
+:#5: 
+    I am a tweet
+    Wed Feb 28 01:28:10 +0000 2018
+#5: 
+    I am a tweet
+    Wed Feb 28 01:28:10 +0000 2018
+:#6: 
+    Java, java, java, where is my iced coffee ?
+    Tue Feb 27 20:53:06 +0000 2018
+#6: 
+    Java, java, java, where is my iced coffee ?
+    Tue Feb 27 20:53:06 +0000 2018
+:#7: 
+    @peterstestacct 
+no vanilla here
+    Tue Feb 27 20:49:39 +0000 2018
+#7: 
+    @peterstestacct 
+no vanilla here
+    Tue Feb 27 20:49:39 +0000 2018
+===================================
+no line command parameters
+switching to screen inputREQ tweetsreceived tweeets correctlytweet output to screen :User tweets:
+number of tweets found = 8
+:#0: 
+    auto-gen liri: Time to get something for dinner
+    Thu Mar 01 00:47:11 +0000 2018
+#0: 
+    auto-gen liri: Time to get something for dinner
+    Thu Mar 01 00:47:11 +0000 2018
+:#1: 
+    auto-gen liri: send-tweet hello this is a good morning
+    Wed Feb 28 15:55:47 +0000 2018
+#1: 
+    auto-gen liri: send-tweet hello this is a good morning
+    Wed Feb 28 15:55:47 +0000 2018
+:#2: 
+    auto-gen liri: send-tweet Test 2
+    Wed Feb 28 15:37:27 +0000 2018
+#2: 
+    auto-gen liri: send-tweet Test 2
+    Wed Feb 28 15:37:27 +0000 2018
+:#3: 
+    auto gen from node: send-tweet Test
+    Wed Feb 28 15:35:44 +0000 2018
+#3: 
+    auto gen from node: send-tweet Test
+    Wed Feb 28 15:35:44 +0000 2018
+:#4: 
+    Auto-generated tweet
+    Wed Feb 28 01:31:58 +0000 2018
+#4: 
+    Auto-generated tweet
+    Wed Feb 28 01:31:58 +0000 2018
+:#5: 
+    I am a tweet
+    Wed Feb 28 01:28:10 +0000 2018
+#5: 
+    I am a tweet
+    Wed Feb 28 01:28:10 +0000 2018
+:#6: 
+    Java, java, java, where is my iced coffee ?
+    Tue Feb 27 20:53:06 +0000 2018
+#6: 
+    Java, java, java, where is my iced coffee ?
+    Tue Feb 27 20:53:06 +0000 2018
+:#7: 
+    @peterstestacct 
+no vanilla here
+    Tue Feb 27 20:49:39 +0000 2018
+#7: 
+    @peterstestacct 
+no vanilla here
+    Tue Feb 27 20:49:39 +0000 2018
+===================================
+no line command parameters
+switching to screen input===================================
+no line command parameters
+switching to screen input===================================
+no line command parameters
+switching to screen input===================================
+no line command parameters
+switching to screen input===================================
+------------------------
+Movie Information:
+------------------------
+
+Movie Title: Crossing Over
+Year Released: 26 Feb 2009
+IMBD Rating: 6.8
+Country Produced: USA
+Language: English, Korean, Persian, Spanish, Arabic
+Plot: Crossing Over is a multi-character canvas about immigrants of different nationalities struggling to achieve legal status in Los Angeles. The film deals with the border, document fraud, the asylum and green card process, work-site enforcement, naturalization, the office of counter terrorism and the clash of cultures.
+Actors: Harrison Ford, Ray Liotta, Ashley Judd, Jim Sturgess
+Rotten Tomatoes Rating: N/A
+Rotten Tomatoes URL: http://www.rottentomatoes.com/m/crossing_over/
+
+===================================
+no line command parameters
+switching to screen input===================================
+------------------------
+Movie Information:
+------------------------
+
+Movie Title: October Sky
+Year Released: 19 Feb 1999
+IMBD Rating: 7.8
+Country Produced: USA
+Language: English
+Plot: In a 1950's mining town called Coalwood, Homer Hickam is a kid with only one future in sight, to work in the local coal mine like his father. However in October 1957, everything changes when the first artificial satellite, Sputnik goes into orbit. With that event, Homer becomes inspired to learn how to build rockets. With his friends and the local nerd, Homer sets to do just that by trial and a lot of error. Unfortunately, most of the town and especially Homer's father thinks that they are wasting their time. Only one teacher in the high school understands their efforts and lets them know that they could become contenders in the national science fair with college scholarships being the prize. Now the gang must learn to perfect their craft and overcome the many problems facing them as they shoot for the stars.
+Actors: Jake Gyllenhaal, Chris Cooper, Laura Dern, Chris Owen
+Rotten Tomatoes Rating: N/A
+Rotten Tomatoes URL: http://www.rottentomatoes.com/m/october_sky/
+
+===================================
+no line command parameters
+switching to screen input===================================
+------------------------
+Movie Information:
+------------------------
+
+Movie Title: Crossing Over
+Year Released: 26 Feb 2009
+IMBD Rating: 6.8
+Country Produced: USA
+Language: English, Korean, Persian, Spanish, Arabic
+Plot: Crossing Over is a multi-character canvas about immigrants of different nationalities struggling to achieve legal status in Los Angeles. The film deals with the border, document fraud, the asylum and green card process, work-site enforcement, naturalization, the office of counter terrorism and the clash of cultures.
+Actors: Harrison Ford, Ray Liotta, Ashley Judd, Jim Sturgess
+Rotten Tomatoes Rating: N/A
+Rotten Tomatoes URL: http://www.rottentomatoes.com/m/crossing_over/
+
+===================================
+no line command parameters
+switching to screen inputWarning ---user aborted
+Thanks for stopping by===================================
+no line command parameters
+switching to screen input
+===================================
+------------------------
+Movie Information:
+------------------------
+
+Movie Title: Batman
+Year Released: 23 Jun 1989
+IMBD Rating: 7.6
+Country Produced: USA, UK
+Language: English, French, Spanish
+Plot: Gotham City. Crime boss Carl Grissom (Jack Palance) effectively runs the town but there's a new crime fighter in town - Batman (Michael Keaton). Grissom's right-hand man is Jack Napier (Jack Nicholson), a brutal man who is not entirely sane... After falling out between the two Grissom has Napier set up with the Police and Napier falls to his apparent death in a vat of chemicals. However, he soon reappears as The Joker and starts a reign of terror in Gotham City. Meanwhile, reporter Vicki Vale (Kim Basinger) is in the city to do an article on Batman. She soon starts a relationship with Batman's everyday persona, billionaire Bruce Wayne.
+Actors: Michael Keaton, Jack Nicholson, Kim Basinger, Robert Wuhl
+Rotten Tomatoes Rating: N/A
+Rotten Tomatoes URL: http://www.rottentomatoes.com/m/1001781-batman/
+
+===================================
+no line command parameters
+switching to screen input
+REQ spotify
+spotify retrieve done
+------------------------
+Song Information:
+------------------------
+
+Song Name: Nights In White Satin - Single Version / Mono Mix
+Artist: The Moody Blues
+Album: Days Of Future Passed (Deluxe Version)
+Preview Here: null
+
+===================================
+no line command parameters
+===================================
+switching to screen input
+===================================
+------------------------
+Movie Information:
+------------------------
+
+Movie Title: Crossing Over
+Year Released: 26 Feb 2009
+IMBD Rating: 6.8
+Country Produced: USA
+Language: English, Korean, Persian, Spanish, Arabic
+Plot: Crossing Over is a multi-character canvas about immigrants of different nationalities struggling to achieve legal status in Los Angeles. The film deals with the border, document fraud, the asylum and green card process, work-site enforcement, naturalization, the office of counter terrorism and the clash of cultures.
+Actors: Harrison Ford, Ray Liotta, Ashley Judd, Jim Sturgess
+Rotten Tomatoes Rating: N/A
+Rotten Tomatoes URL: http://www.rottentomatoes.com/m/crossing_over/
+
+===================================
+===================================
+no line command parameters
+===================================
+switching to screen input
+REQ spotify
+spotify retrieve done
+------------------------
+Song Information:
+------------------------
+
+Song Name: Will You Be There (Theme from "Free Willy")
+Artist: Michael Jackson
+Album: FREE WILLY - ORIGINAL MOTION PICTURE SOUNDTRACK
+Preview Here: https://p.scdn.co/mp3-preview/16bfc51318a27e338c3dfdde8d819b8d3894789d?cid=1b14fb09225b444fb95792ba05de9fb2
+
+===================================
+no line command parameters
+===================================
+switching to screen input
+REQ spotify
+spotify retrieve done
+===================================
+------------------------
+Song Information:
+------------------------
+
+Song Name: Will You Be There (Theme from "Free Willy")
+Artist: Michael Jackson
+Album: FREE WILLY - ORIGINAL MOTION PICTURE SOUNDTRACK
+Preview Here: https://p.scdn.co/mp3-preview/16bfc51318a27e338c3dfdde8d819b8d3894789d?cid=1b14fb09225b444fb95792ba05de9fb2
+
+===================================
+===================================
+no line command parameters
+===================================
+switching to screen input
+REQ tweets
+received tweeets correctly
+tweet output to screen :
+User tweets:
+
+number of tweets found = 8
+
+===================================
+#0: 
+    auto-gen liri: Time to get something for dinner
+    Thu Mar 01 00:47:11 +0000 2018
+
+===================================
+===================================
+#1: 
+    auto-gen liri: send-tweet hello this is a good morning
+    Wed Feb 28 15:55:47 +0000 2018
+
+===================================
+===================================
+#2: 
+    auto-gen liri: send-tweet Test 2
+    Wed Feb 28 15:37:27 +0000 2018
+
+===================================
+===================================
+#3: 
+    auto gen from node: send-tweet Test
+    Wed Feb 28 15:35:44 +0000 2018
+
+===================================
+===================================
+#4: 
+    Auto-generated tweet
+    Wed Feb 28 01:31:58 +0000 2018
+
+===================================
+===================================
+#5: 
+    I am a tweet
+    Wed Feb 28 01:28:10 +0000 2018
+
+===================================
+===================================
+#6: 
+    Java, java, java, where is my iced coffee ?
+    Tue Feb 27 20:53:06 +0000 2018
+
+===================================
+===================================
+#7: 
+    @peterstestacct 
+no vanilla here
+    Tue Feb 27 20:49:39 +0000 2018
+
+===================================
+no line command parameters
+switching to screen input
+REQ spotify
+spotify retrieve done
+------------------------
+Song Information:
+------------------------
+
+Song Name: Will You Be There (Theme from "Free Willy")
+Artist: Michael Jackson
+Album: FREE WILLY - ORIGINAL MOTION PICTURE SOUNDTRACK
+Preview Here: https://p.scdn.co/mp3-preview/16bfc51318a27e338c3dfdde8d819b8d3894789d?cid=1b14fb09225b444fb95792ba05de9fb2
+
+no line command parameters
+switching to screen input
+REQ tweets
+received tweeets correctly
+tweet output to screen :
+===================================
+User tweets:
+
+number of tweets found = 8
+
+#0: 
+    auto-gen liri: Time to get something for dinner
+    Thu Mar 01 00:47:11 +0000 2018
+
+#1: 
+    auto-gen liri: send-tweet hello this is a good morning
+    Wed Feb 28 15:55:47 +0000 2018
+
+#2: 
+    auto-gen liri: send-tweet Test 2
+    Wed Feb 28 15:37:27 +0000 2018
+
+#3: 
+    auto gen from node: send-tweet Test
+    Wed Feb 28 15:35:44 +0000 2018
+
+#4: 
+    Auto-generated tweet
+    Wed Feb 28 01:31:58 +0000 2018
+
+#5: 
+    I am a tweet
+    Wed Feb 28 01:28:10 +0000 2018
+
+#6: 
+    Java, java, java, where is my iced coffee ?
+    Tue Feb 27 20:53:06 +0000 2018
+
+#7: 
+    @peterstestacct 
+no vanilla here
+    Tue Feb 27 20:49:39 +0000 2018
+
+
+
+===================================
+no line command parameters
+switching to screen input
+------------------------
+Movie Information:
+------------------------
+
+Movie Title: Birdcage
+Year Released: N/A
+IMBD Rating: N/A
+Country Produced: UK
+Language: English
+Plot: N/A
+Actors: Rosemary Eason, Augusta McKie
+Rotten Tomatoes Rating: N/A
+Rotten Tomatoes URL: N/A
+
+no line command parameters
+switching to screen input
+Warning ---no song specified. using default
+REQ spotify
+spotify retrieve done
+------------------------
+Song Information:
+------------------------
+
+Song Name: I Am Not Your Friend (no Fool Edit)
+Artist: Enin Perryman
+Album: And Then Came Enin!
+Preview Here: https://p.scdn.co/mp3-preview/d43fada8c411925d54fa76a37289d849aec4f144?cid=1b14fb09225b444fb95792ba05de9fb2
+
+no line command parameters
+switching to screen input
+no line command parameters
+switching to screen input
+no line command parameters
+switching to screen input
+tweet search output to screen :
+===================================
+Search tweets:
+
+number of tweets found = undefined
+
+
+
+===================================
+no line command parameters
+switching to screen input
+tweet search output to screen :
+===================================
+Search tweets:
+
+number of tweets found = undefined
+
+
+
+===================================
+no line command parameters
+switching to screen input
+tweet search output to screen :
+===================================
+Search tweets:
+
+number of tweets found = undefined
+
+
+
+===================================
+no line command parameters
+switching to screen input
+searched tweeets correctly
+tweet search output to screen :
+===================================
+Search tweets:
+
+number of tweets found = undefined
+
+
+
+===================================
+no line command parameters
+switching to screen input
+searched tweeets correctly
+tweet search output to screen :
+===================================
+Search tweets:
+
+number of tweets found = undefined
+
+
+
+===================================
+no line command parameters
+switching to screen input
+searched tweeets correctly
+tweet search output to screen :
+===================================
+Search tweets:
+
+number of tweets found = undefined
+
+
+
+===================================
+no line command parameters
+switching to screen input
+no line command parameters
+switching to screen input
+searched tweeets correctly
+tweet search output to screen :
+===================================
+Search tweets:
+
+number of tweets found = undefined
+
+
+
+===================================
+tweet search output to screen :
+===================================
+Search tweets:
+
+number of tweets found = undefined
+
+
+
+===================================
+no line command parameters
+switching to screen input
+no line command parameters
+switching to screen input
+searched tweeets correctly
+tweet search output to screen :
+===================================
+Search tweets:
+
+number of tweets found = undefined
+
+
+
+===================================
+tweet search output to screen :
+===================================
+Search tweets:
+
+number of tweets found = 15
+
+#0: 
+    Went down a couple band sizes yet went back up a cup of Java.
+    Thu Mar 01 10:38:09 +0000 2018
+
+#1: 
+    @cutegirlvani222 kya karooon kithe java😋
+    Thu Mar 01 10:38:09 +0000 2018
+
+#2: 
+    1億2500万台のTV機器でJavaを実行しています。
+    Thu Mar 01 10:37:55 +0000 2018
+
+#3: 
+    RT @Dieagmex: Titulares de #HacemosFuturo culminan el curso de nivelación en matemáticas y lógica para iniciar una capacitación intensiva e…
+    Thu Mar 01 10:37:54 +0000 2018
+
+#4: 
+    How about yours? &gt; https://t.co/lfELt31tKB  &lt; #monitoring #bloggers #blogs #website #downtime #uptime #tech #code… https://t.co/hqgmWDQC1X
+    Thu Mar 01 10:37:28 +0000 2018
+
+#5: 
+    RT @lime_cl: “Why starting a new Android project with Java is a bad idea” by @lehtimaeki https://t.co/nxp1xJIGJS #androiddev #java
+    Thu Mar 01 10:37:24 +0000 2018
+
+#6: 
+    Javaか！さてはJavaの罠か！
+    Thu Mar 01 10:37:16 +0000 2018
+
+#7: 
+    RT @SquirtVid: Hot Brunette #SquirtingOrgasm #Squirt #GirlsThatSquirt 💦💦 https://t.co/qTURIX72tz
+    Thu Mar 01 10:37:15 +0000 2018
+
+#8: 
+    RT @Java_Dose: Building #microservices with Netflix OSS, Apache Kafka and Spring Boot - Part 2 https://t.co/mNriss2dUa https://t.co/Cxf4rqU…
+    Thu Mar 01 10:37:14 +0000 2018
+
+#9: 
+    RT @JAXenterCOM: What are you doing in October this year? We’re calling for papers on Java, microservices, and more for JAX London 2018. ht…
+    Thu Mar 01 10:37:12 +0000 2018
+
+#10: 
+    What are you doing in October this year? We’re calling for papers on Java, microservices, and more for JAX London 2… https://t.co/BzNd2DAIG3
+    Thu Mar 01 10:37:00 +0000 2018
+
+#11: 
+    @jabawock_ichi Javaプログラミング
+    Thu Mar 01 10:36:57 +0000 2018
+
+#12: 
+    @java_suzume ツイ消ししちゃった ꒰ •ॢ ̫ -ॢ๑꒱✩ | 呪われしツイートを一括削除！ 黒歴史クリーナー - https://t.co/x8UeTPDdqi #黒歴史クリーナー
+    Thu Mar 01 10:36:40 +0000 2018
+
+#13: 
+    The @rebazeio Integrity library just got its first legitimate documentation. https://t.co/laIeIIb9mf If you are int… https://t.co/UgUR5ZOPJc
+    Thu Mar 01 10:36:40 +0000 2018
+
+#14: 
+    @java_suzume ツイ消ししちゃお ꉂꉂƱʊ꒰&gt;ꈊ&lt;ૢ꒱❣❣ | 呪われしツイートを一括削除！ 黒歴史クリーナー - https://t.co/x8UeTPDdqi #黒歴史クリーナー
+    Thu Mar 01 10:36:40 +0000 2018
+
+
+
+===================================
+no line command parameters
+switching to screen input
+searched tweeets correctly
+tweet search output to screen :
+===================================
+Search tweets:
+
+number of tweets found = undefined
+
+
+
+===================================
+tweet search output to screen :
+===================================
+Search tweets:
+
+number of tweets found = 14
+
+#0: 
+    Di Tengah Ekonomi Lesu, Grup Band Menteri Akan Manggung di Java Jazz https://t.co/OsjkCaGgKo
+    Thu Mar 01 10:39:33 +0000 2018
+
+#1: 
+    JAVA辺りがファット出してくれないかな…
+    Thu Mar 01 10:39:08 +0000 2018
+
+#2: 
+    あのね、お普段からことがちんぽのだゥゥゥゥゥ♡SHIHO、ハァァァァァをよろよろ歩いていて 何これ は https://t.co/umad2NOBqU
+    Thu Mar 01 10:39:00 +0000 2018
+
+#3: 
+    うちの魔王さまが弱い!…けど地道にレベル上げしながら世界を侵略開始です!! 【無料RPG】 #うちの魔王さま #さすゆう #ハクスラ #RPG https://t.co/G89gA1XgEb https://t.co/Dc3x8HwhTG
+    Thu Mar 01 10:38:59 +0000 2018
+
+#4: 
+    RT @curry9999: @nagise そうですね・・・。
+
+Javaから始めた方には理解できないこと。
+・ソースコードの作成日を見ると1970年代が大半。
+・ソースコードの修正は、ソースコードをコピーして編集。
+・ラインプリンタを使用。
+・PGのヘルプで来る方が50代～…
+    Thu Mar 01 10:38:57 +0000 2018
+
+#5: 
+    A great article from @InfoQ on @EclipseOMR @openj9 and how it all fits together with #Java and #OpenJDK as well as… https://t.co/4Cm5cJIFZE
+    Thu Mar 01 10:38:57 +0000 2018
+
+#6: 
+    Yang mau tiket Java Jazz GRATIS mana suaranyaaa??
+
+Mau? Cek Instagram dan Instastory @hardrockfm sekarang juga!! https://t.co/xwg3a82fhc
+    Thu Mar 01 10:38:41 +0000 2018
+
+#7: 
+    RT @alvaroga91: Esto lo descubrí hace un tiempo trasteando con apks para tratar de obtener los fuentes de las aplicaciones. Lo comparto por…
+    Thu Mar 01 10:38:39 +0000 2018
+
+#8: 
+    Went down a couple band sizes yet went back up a cup of Java.
+    Thu Mar 01 10:38:09 +0000 2018
+
+#9: 
+    @cutegirlvani222 kya karooon kithe java😋
+    Thu Mar 01 10:38:09 +0000 2018
+
+#10: 
+    1億2500万台のTV機器でJavaを実行しています。
+    Thu Mar 01 10:37:55 +0000 2018
+
+#11: 
+    RT @Dieagmex: Titulares de #HacemosFuturo culminan el curso de nivelación en matemáticas y lógica para iniciar una capacitación intensiva e…
+    Thu Mar 01 10:37:54 +0000 2018
+
+#12: 
+    How about yours? &gt; https://t.co/lfELt31tKB  &lt; #monitoring #bloggers #blogs #website #downtime #uptime #tech #code… https://t.co/hqgmWDQC1X
+    Thu Mar 01 10:37:28 +0000 2018
+
+#13: 
+    RT @lime_cl: “Why starting a new Android project with Java is a bad idea” by @lehtimaeki https://t.co/nxp1xJIGJS #androiddev #java
+    Thu Mar 01 10:37:24 +0000 2018
+
+
+
+===================================
+no line command parameters
+switching to screen input
+searched tweeets correctly
+tweet search output to screen :
+===================================
+Search tweets:
+
+number of tweets found = undefined
+
+
+
+===================================
+tweet search output to screen :
+===================================
+Search tweets:
+
+number of tweets found = 15
+
+#1:   @ProfJNMoyo @DailyNewsZim Wageza here
+  by: java_netmaster
+  at:  Thu Mar 01 10:42:54 +0000 2018
+
+#0:   RT @ModisFrance: A la recherche d'un emploi, en CDI, dans le numérique à #Nantes ? 
+
+Modis France lance une #formation au sein de sa Digita…
+  by: s_flochlay
+  at:  Thu Mar 01 10:42:56 +0000 2018
+
+#2:   Core Java Developers- Contracts- Glasgow https://t.co/JoVNcmCY6V
+  by: JobsForDevOps
+  at:  Thu Mar 01 10:42:27 +0000 2018
+
+#3:   Java Web Developer https://t.co/7jF1owFICu
+  by: JobsForDevOps
+  at:  Thu Mar 01 10:42:27 +0000 2018
+
+#4:   Senior/Lead Java Engineer - CI/CD, Agile, Transformation - Lond https://t.co/wDAzIDiZ5p
+  by: JobsForDevOps
+  at:  Thu Mar 01 10:42:24 +0000 2018
+
+#5:   Java Developer, Polyglot Software Engineer - Digital Publishing https://t.co/vtZp9NReA1
+  by: JobsForDevOps
+  at:  Thu Mar 01 10:42:22 +0000 2018
+
+#6:   Java Developer, Senior - Agile, XP, DevOps - London - CONTRACT https://t.co/0UPiriRNWj
+  by: JobsForDevOps
+  at:  Thu Mar 01 10:42:21 +0000 2018
+
+#7:   Java Developer - TDD, Mule - CONTRACT - London https://t.co/pLWYXXAsuQ
+  by: JobsForDevOps
+  at:  Thu Mar 01 10:42:18 +0000 2018
+
+#8:   Java Developer - Java 8, Scala TDD/XP - Manchester https://t.co/KHXlcyp20s
+  by: JobsForDevOps
+  at:  Thu Mar 01 10:42:10 +0000 2018
+
+#9:   RT @veronicatorras: Kick off of the #Startup ##battle at #MWC18: @Jelurida @lioryaffe pitch about #Ardor #Blockchain as a service addressed…
+  by: alexpfeiffer
+  at:  Thu Mar 01 10:42:03 +0000 2018
+
+#10:   My HMS Exeter model much loved, after such gallantry at River Plate &amp; Java Sea,sad 2c her &amp; sister ships &amp;war dead… https://t.co/NDeqjhOciQ
+  by: michaelkinsell8
+  at:  Thu Mar 01 10:41:45 +0000 2018
+
+#11:   RT @java: Bean Validation 2.0 (JSR 380)  supports container element constraints 
+
+#Java 
+
+https://t.co/wK8byVjMqY https://t.co/aO1Zygu6Vm
+  by: drupalio
+  at:  Thu Mar 01 10:41:43 +0000 2018
+
+#12:   「Javaが書けるならJavaScriptも書けるだろ」的な事を抜かす手合いには、「メロン農家の人にメロンパン売ってくださいって言ってみてください」と返すようにしてる。
+  by: omoshirosogofuo
+  at:  Thu Mar 01 10:41:35 +0000 2018
+
+#13:   RT @java: We use a lot #Play framework, it’s a great #Java / #Scala framework to develop web applications
+
+https://t.co/XLfYu83Lh9
+  by: drupalio
+  at:  Thu Mar 01 10:41:28 +0000 2018
+
+#14:   OpenJDK Vulnerability Group https://t.co/9iH5zBrLSn
+  by: admdeJong
+  at:  Thu Mar 01 10:41:26 +0000 2018
+
+
+
+===================================
+no line command parameters
+switching to screen input
+searched tweeets correctly
+tweet search output to screen :
+===================================
+Search tweets:
+
+number of tweets found = undefined
+
+
+
+===================================
+tweet search output to screen :
+===================================
+Search tweets:
+
+number of tweets found = 15
+
+#0:   RT @atrupar: Trump seems to think weapons used in mass shootings are bought on "the black market."
+
+@SenFeinstein tells him, "You can go in…
+  by: adjordan
+  at: Thu Mar 01 10:42:27 +0000 2018
+
+#1:   RT @ddale8: Trump is again strongly pushing the idea of raising the AR-15 purchase age to 21, though he won't fully commit. He suggests sen…
+  by: grayan12
+  at: Thu Mar 01 10:41:30 +0000 2018
+
+#2:   RT @atrupar: Trump seems to think weapons used in mass shootings are bought on "the black market."
+
+@SenFeinstein tells him, "You can go in…
+  by: grascarp
+  at: Thu Mar 01 10:41:29 +0000 2018
+
+#3:   RT @ddale8: Trump today:
+- Says cops should confiscate guns from dangerous people even if they don't have a right 
+- Says lawmakers are sca…
+  by: adjordan
+  at: Thu Mar 01 10:41:04 +0000 2018
+
+#4:   RT @Thomas1774Paine: Bloody Knife Attack Ends Immediately When Bad Guy Sees Hero Holding AR-15 (VIDEO) : https://t.co/MDXw4vQOzZ
+  by: cd_trump
+  at: Thu Mar 01 10:40:36 +0000 2018
+
+#5:   RT @atrupar: Trump seems to think weapons used in mass shootings are bought on "the black market."
+
+@SenFeinstein tells him, "You can go in…
+  by: therealzanetta
+  at: Thu Mar 01 10:40:22 +0000 2018
+
+#6:   RT @atrupar: Trump seems to think weapons used in mass shootings are bought on "the black market."
+
+@SenFeinstein tells him, "You can go in…
+  by: TeisLindemark
+  at: Thu Mar 01 10:39:40 +0000 2018
+
+#7:   RT @atrupar: Trump seems to think weapons used in mass shootings are bought on "the black market."
+
+@SenFeinstein tells him, "You can go in…
+  by: lola_patty
+  at: Thu Mar 01 10:36:07 +0000 2018
+
+#8:   RT @HonoredSpirit: Trump could say “I solemnly swear on the blood of Christ I will ban AR-15s” and in 15 minutes he won’t even remember he…
+  by: grantwest100
+  at: Thu Mar 01 10:35:10 +0000 2018
+
+#9:   RT @ddale8: Trump today:
+- Says cops should confiscate guns from dangerous people even if they don't have a right 
+- Says lawmakers are sca…
+  by: lola_patty
+  at: Thu Mar 01 10:34:53 +0000 2018
+
+#10:   RT @atrupar: Trump seems to think weapons used in mass shootings are bought on "the black market."
+
+@SenFeinstein tells him, "You can go in…
+  by: francosmooth
+  at: Thu Mar 01 10:32:59 +0000 2018
+
+#11:   RT @ddale8: Trump today:
+- Says cops should confiscate guns from dangerous people even if they don't have a right 
+- Says lawmakers are sca…
+  by: alkaseltzz
+  at: Thu Mar 01 10:31:18 +0000 2018
+
+#12:   RT @TheRoyalPosts: Liberals: “Boycott the NRA!”
+*NRA memberships skyrocket*
+
+Dems: “Boycott FedEx”
+*FedEx stock skyrockets*
+
+Dems: “Boycott…
+  by: JK62560
+  at: Thu Mar 01 10:28:55 +0000 2018
+
+#13:   RT @atrupar: Trump seems to think weapons used in mass shootings are bought on "the black market."
+
+@SenFeinstein tells him, "You can go in…
+  by: ArtVandelay10
+  at: Thu Mar 01 10:26:42 +0000 2018
+
+#14:   RT @atrupar: Trump seems to think weapons used in mass shootings are bought on "the black market."
+
+@SenFeinstein tells him, "You can go in…
+  by: SusanneAdele
+  at: Thu Mar 01 10:25:51 +0000 2018
+
+
+
+===================================
+no line command parameters
+switching to screen input
+REQ spotify
+spotify retrieve done
+------------------------
+Song Information:
+------------------------
+
+Song Name: Or Nah (feat. The Weeknd, Wiz Khalifa and DJ Mustard) - Remix
+Artist: Ty Dolla $ign
+Album: Or Nah (feat. The Weeknd, Wiz Khalifa and DJ Mustard) [Remix Version]
+Preview Here: https://p.scdn.co/mp3-preview/70f126c139847335bc03c756c55b80c99892268e?cid=1b14fb09225b444fb95792ba05de9fb2
+
+help command:
+help=          '?'
+interactive     no parameters give interactive screen
+read tweets=   'my-tweets'
+send tweet=    'send-tweet' + <tweet to send>
+search tweets= 'search-tweet' + <tweet search string>
+(by subject)
+spotify=       'undefined' + <song title to play>
+movie search=  'movie-this' + <movie title>
+(by title)
+reset log file='reset-log'
